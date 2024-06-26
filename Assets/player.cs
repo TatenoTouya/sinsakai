@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         //c‰¡•ûŒü‚Ì“ü—Í‚ğó•tAˆÚ“®‚·‚é
-        var hol = Input.GetAxisRaw("Horizontal");
+        var hol = 0f;
         var ver = Input.GetAxisRaw("Vertical");
 
         _rb.velocity = new Vector2(hol, ver) * _speed;
