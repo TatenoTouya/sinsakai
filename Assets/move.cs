@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //‰EŒü‚«‚É“™‘¬‚Åi‚Ş
-        this.transform.position += new Vector3(STEP * Time.deltaTime, 0, 0);
+
     }
 }

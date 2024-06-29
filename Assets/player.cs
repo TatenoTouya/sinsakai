@@ -1,5 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
-
+// 子機の位置
 public class Player : MonoBehaviour
 {
     [Header("移動速度")]
@@ -17,6 +18,8 @@ public class Player : MonoBehaviour
             _rb = gameObject.AddComponent<Rigidbody2D>();
         }
         _rb.gravityScale = 0f; // 重力を無効化する
+
+        _rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation; ;
     }
 
     private void Update()
@@ -34,5 +37,6 @@ public class Player : MonoBehaviour
     {
         _speed += value;
         Debug.Log($"SpeedUp!! {_speed}");
+
     }
 }

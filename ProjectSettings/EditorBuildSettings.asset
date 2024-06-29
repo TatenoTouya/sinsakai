@@ -5,22 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Playground/Examples/Maze/MazeLevel0.unity
-    guid: 029e597475c3944a5b42678232c2822b
   - enabled: 1
-    path: Assets/Playground/Examples/Maze/MazeLevel1.unity
-    guid: f9b71d909be1c4e9dbb8b3599d76b33c
+    path: Assets/title.unity
+    guid: d75419dc223d47541abb6483f1e55a58
+  - enabled: 1
+    path: Assets/SINSA.unity
+    guid: 1c263b2defba0a0449b5be056ff8bc67
+  - enabled: 1
+    path: Assets/GameOvar.unity
+    guid: 71a54c65ae69cbf408bc892b4d3a4ff7
   - enabled: 0
-    path: Assets/Playground/Examples/Adventure/Adventure.unity
-    guid: f723b1979947445779b87ef7a1089a32
-  - enabled: 0
-    path: Assets/Playground/Examples/Football/Football.unity
-    guid: 8b655b0fb8d8c4758a154fd99dc41447
-  - enabled: 0
-    path: Assets/Playground/Examples/Lander/Lander.unity
-    guid: 3925160d1efe749d5a026cbf18c60f83
-  - enabled: 0
-    path: Assets/Playground/Examples/Roguelike/Roguelike.unity
-    guid: ad15a26015e49439387b05c22fe7a962
+    path: Assets/ClearScene.unity
+    guid: f7556b5c4eb2d7e47829bca2e6e44d72
   m_configObjects: {}

@@ -1,17 +1,42 @@
 using UnityEngine;
 
-public class LazerController : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f; // e’e‚Ì‘¬“x
+    private int bulletSpeed = 10;
+    public int scoreValue = 100;
 
+    // Update is called once per frame
     void Update()
     {
         Move();
+        Delete();
     }
 
     private void Move()
     {
-        // Œ»Ý‚ÌˆÊ’u‚É‘¬“x‚ð‰ÁŽZ‚µ‚ÄˆÚ“®‚·‚é
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        transform.position += new Vector3(bulletSpeed, 0, 0) * Time.deltaTime;
+    }
+
+    // ‰æ–ÊŠO‚Éo‚½‚çÁ‚·
+    private void Delete()
+    {
+        if (transform.position.x > 10)
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
+
+            ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+            if (scoreManager != null)
+            {
+                scoreManager.AddScore(scoreValue);
+            }
+        }
     }
 }
